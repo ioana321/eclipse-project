@@ -13,7 +13,7 @@ public class JavaBean {
     public void connect() throws ClassNotFoundException, SQLException, Exception {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/facultate?useSSL=false", "root", "Azbycx182736!");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/facultate?useSSL=false", "root", "placeholder");
         } catch (ClassNotFoundException cnfe) {
             error = "ClassNotFoundException: Nu s-a gasit driverul bazei de date.";
             throw new ClassNotFoundException(error);
@@ -29,7 +29,7 @@ public class JavaBean {
     public void connect(String bd) throws ClassNotFoundException, SQLException, Exception {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + bd, "root", "Azbycx182736!");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + bd, "root", "placeholder");
         } catch (ClassNotFoundException cnfe) {
             error = "ClassNotFoundException: Nu s-a gasit driverul bazei de date.";
             throw new ClassNotFoundException(error);
@@ -45,7 +45,7 @@ public class JavaBean {
     public void connect(String bd, String ip) throws ClassNotFoundException, SQLException, Exception {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://" + ip + ":3306/" + bd, "root", "Azbycx182736!");
+            con = DriverManager.getConnection("jdbc:mysql://" + ip + ":3306/" + bd, "root", "placeholder");
         } catch (ClassNotFoundException cnfe) {
             error = "ClassNotFoundException: Nu s-a gasit driverul bazei de date.";
             throw new ClassNotFoundException(error);
